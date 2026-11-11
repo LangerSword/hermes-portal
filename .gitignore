@@ -1,0 +1,5 @@
+video/
+shots/
+node_modules/
+*.webm
+*.mp4
