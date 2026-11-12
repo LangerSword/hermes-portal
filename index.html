@@ -27,6 +27,7 @@
     <a href="#wall">The wall</a>
     <a href="#loop">The loop</a>
     <a href="#backend">Backend</a>
+    <a href="#plates">Plates</a>
     <a href="#portal">Portal</a>
     <a href="#manifesto">Manifesto</a>
   </nav>
@@ -58,7 +59,7 @@
           </button>
           <a class="text-link" href="#wall">SEE THE PROOF <span>↓</span></a>
         </div>
-        <p class="hero-meta">MIT · TMUX 3.X · 33 TESTS · NO API KEY</p>
+        <p class="hero-meta">MIT · TMUX 3.X · 54 TESTS · NO API KEY</p>
       </div>
       <div class="hero-visual">
         <canvas id="core-canvas" aria-label="Wireframe terminal core"></canvas>
@@ -182,12 +183,58 @@ inappropriate ioctl for device</pre>
       </div>
       <p class="term-note mono">THE SHELL SURVIVES THE TURN. THE PANE SURVIVES THE SHELL.</p>
     </div>
-    <div class="backend-foot mono"><span>33 TESTS</span><span>1 TOOL</span><span>0 HOOKS</span><span>TMUX 3.X</span><span>MIT</span></div>
+    <div class="backend-foot mono"><span>54 TESTS</span><span>24 TOOLS</span><span>1 HOOK</span><span>TMUX 3.X</span><span>MIT</span></div>
+  </section>
+
+  <section class="plates" id="plates">
+    <div class="plates-head">
+      <p class="eyebrow on-navy">04 / PLATES</p>
+      <h2 class="display-navy reveal-lines">
+        <span class="rl"><span>THE PANES,</span></span>
+        <span class="rl"><span>IN ONE BIT<span class="dot">.</span></span></span>
+      </h2>
+      <p class="section-body">Three plates made for Pilot, reduced to a two-colour dither. The terminal is the subject; the screen is the paper.</p>
+    </div>
+    <div class="plate-stack">
+      <article class="plate-row">
+        <figure class="plate-frame plate-wide">
+          <img src="assets/plates/type.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A hand pressing a key, reduced to one-bit pale-blue dither.">
+          <figcaption class="mono"><span>#01</span> HAND / ONE KEY</figcaption>
+        </figure>
+        <div class="plate-copy">
+          <span class="mono plate-kicker">#01 / TYPE</span>
+          <h3>It types into programs.</h3>
+          <p>The agent sends literal text and named keys into a real pane: <span class="mono">i</span>, a line, <span class="mono">Esc</span>, <span class="mono">:wq</span>. The program renders; the agent reads it back.</p>
+        </div>
+      </article>
+      <article class="plate-row">
+        <figure class="plate-frame plate-wide">
+          <img src="assets/plates/face.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A face reflected in a CRT, reduced to one-bit yellow dither.">
+          <figcaption class="mono"><span>#02</span> FACE / SAME PANE</figcaption>
+        </figure>
+        <div class="plate-copy">
+          <span class="mono plate-kicker">#02 / TAKE OVER</span>
+          <h3>It leaves you the keyboard.</h3>
+          <p>Attach to the same tmux pane with <span class="mono">hermes pilot attach</span>. Anything you type is what the agent reads next. No copy step, no second shell.</p>
+        </div>
+      </article>
+      <article class="plate-row">
+        <figure class="plate-frame plate-wide">
+          <img src="assets/plates/wall.webp" width="1200" height="800" loading="lazy" decoding="async" alt="A wall of terminal windows, reduced to one-bit mint dither.">
+          <figcaption class="mono"><span>#03</span> WALL / READ AS TEXT</figcaption>
+        </figure>
+        <div class="plate-copy">
+          <span class="mono plate-kicker">#03 / READ</span>
+          <h3>It reads the screen.</h3>
+          <p><span class="mono">htop</span> repaints, <span class="mono">fzf</span> takes over the display, <span class="mono">wait</span> polls the text until the screen settles. No escape-code parser, no screenshots.</p>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section class="portal" id="portal">
     <div class="portal-head">
-      <p class="eyebrow on-navy">04 / THE PORTAL</p>
+      <p class="eyebrow on-navy">05 / THE PORTAL</p>
       <h2 class="display-navy reveal-lines">
         <span class="rl"><span>ONE ACCOUNT FOR</span></span>
         <span class="rl"><span>THE WHOLE MACHINE<span class="dot">.</span></span></span>
@@ -232,7 +279,7 @@ inappropriate ioctl for device</pre>
           </div>
         </div>
         <aside class="ps-art">
-          <img src="assets/hands.jpg" alt="Dürer's Praying Hands, engraved and tinted blue">
+          <img src="assets/hands.webp" width="720" height="900" loading="lazy" decoding="async" alt="Dürer's Praying Hands, engraved and tinted blue">
           <div class="ps-art-copy">
             <span class="ps-crumb mono">// DOWNLOAD</span>
             <h4>Install Hermes</h4>
@@ -247,7 +294,7 @@ inappropriate ioctl for device</pre>
 
   <section class="manifesto" id="manifesto">
     <div class="manifesto-head">
-      <p class="eyebrow on-navy">05 / MANIFESTO</p>
+      <p class="eyebrow on-navy">06 / MANIFESTO</p>
       <p class="mono hint">DRAG THE CORE. THE TEXT PARTING AROUND IT IS MEASURED, NOT WRAPPED.</p>
     </div>
     <div class="pretext-stage">
@@ -260,7 +307,7 @@ inappropriate ioctl for device</pre>
 
   <section class="install" id="install">
     <div class="install-head">
-      <p class="eyebrow on-paper">06 / INSTALL</p>
+      <p class="eyebrow on-paper">07 / INSTALL</p>
       <h2 class="display-paper big reveal-lines">
         <span class="rl"><span>PUT IT ON</span></span>
         <span class="rl"><span>YOUR <em class="blue-em">machine.</em></span></span>
@@ -271,10 +318,10 @@ inappropriate ioctl for device</pre>
         <div class="step"><span class="mono">01</span><div><p class="step-title">Install from the catalog</p><pre class="mono">hermes plugins install pilot</pre></div></div>
         <div class="step"><span class="mono">02</span><div><p class="step-title">Enable it</p><pre class="mono">hermes plugins enable pilot</pre></div></div>
         <div class="step"><span class="mono">03</span><div><p class="step-title">Optional: make it the terminal backend</p><pre class="mono">hermes pilot backend on</pre></div></div>
-        <p class="install-meta mono">TMUX 3.X · MIT · 33 TESTS · NO API KEY · WORKS OFFLINE</p>
+        <p class="install-meta mono">TMUX 3.X · MIT · 54 TESTS · NO API KEY · WORKS OFFLINE</p>
       </div>
       <div class="install-card">
-        <div class="ic-top mono"><span>PILOT</span><span>v0.2.0</span></div>
+        <div class="ic-top mono"><span>PILOT</span><span>v0.3.1</span></div>
         <h3>A real TTY for the agent.</h3>
         <p>Open, read, type, wait, attach. The pane is the machine.</p>
         <div class="ic-links mono">

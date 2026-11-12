@@ -344,6 +344,7 @@ function demoTour() {
       { to: startOf("loop") + 80, ms: 1200, hold: 2200 },
       { to: startOf("loop") + 1200, ms: 3200, hold: 1800 },
       { to: off("#backend") + 40, ms: 1800, hold: 3600 },
+      { to: off("#plates") + 40, ms: 1400, hold: 2400 },
       { to: off("#portal") + 40, ms: 1600, hold: 3600 },
       { to: off("#manifesto"), ms: 1400, hold: 3000 },
       { to: off("#install") + 40, ms: 1400, hold: 3400 },
@@ -355,7 +356,12 @@ function demoTour() {
   }, 900);
 }
 
-core();
+const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+const wideEnough = !matchMedia("(max-width: 760px)").matches;
+if (motionOK && wideEnough) {
+  if ("requestIdleCallback" in window) requestIdleCallback(core, { timeout: 1800 });
+  else setTimeout(core, 900);
+}
 motion();
 manifesto();
 demoTour();
