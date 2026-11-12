@@ -118,6 +118,7 @@ async function core() {
     requestAnimationFrame(frame);
   }
   frame();
+  heroVisual.classList.add("is-live");
 }
 
 // ── motion ──────────────────────────────────────────────────────────────────
@@ -359,8 +360,7 @@ function demoTour() {
 const motionOK = !matchMedia("(prefers-reduced-motion: reduce)").matches;
 const wideEnough = !matchMedia("(max-width: 760px)").matches;
 if (motionOK && wideEnough) {
-  if ("requestIdleCallback" in window) requestIdleCallback(core, { timeout: 1800 });
-  else setTimeout(core, 900);
+  heroVisual?.addEventListener("pointerenter", () => core(), { once: true });
 }
 motion();
 manifesto();
